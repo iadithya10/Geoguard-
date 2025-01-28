@@ -1,0 +1,189 @@
+/* General body styling  */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #4a90e2, #274d78);
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .rain-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .rain-drop {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.4));
+    animation: rain linear infinite;
+  }
+  
+  .lightning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  @keyframes rain {
+    0% {
+      transform: translateY(-100px) rotate(20deg);
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(20deg);
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes flash {
+    0%, 100% {
+      background: transparent;
+    }
+    50% {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+/* Flood Background */
+.nature-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?auto=format&fit=crop&q=80') center/cover;
+    z-index: 0;
+    animation: flood 20s ease-in-out infinite;
+  }
+  
+  @keyframes flood {
+    0%, 100% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+
+  /* Rainfall animation layer 
+  .rain-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .rain-drop {
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    from {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }  
+    */
+  
+  /* Centered container for signup form */
+  .container {
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .form-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .input-group {
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ddd;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background: #4a90e2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #357ABD;
+  }
+  
+  a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
